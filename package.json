@@ -1,7 +1,7 @@
 {
-  "name": "quarantine-buster",
+  "name": "mailer",
   "version": "1.0.0",
-  "description": "Get your org emails past Cisco's cancerous piece of software",
+  "description": "Batch emailing on Office 365",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

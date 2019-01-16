@@ -22,7 +22,7 @@ const sendMail = (options) => {
   const template_path = process.argv[3];
 
   if (!csv_path || !template_path) {
-    console.error("Pass through a path to the csv of people and an HTML template, something like: \n\n\tnode index.js ./people.csv ./template.html\n");
+    console.error("usage: node index.js ./list.csv ./template.html\n");
     return;
   }
 
@@ -35,7 +35,7 @@ const sendMail = (options) => {
       const options = {
         from: config.auth.user,
         to: person.email,
-        subject: 'THIS IS A TEST: BoilerMake Exec Team Interview',
+        subject: 'BoilerMake Exec Team Recruitment',
         html: content
       };
 
