@@ -20,6 +20,7 @@ const sendMail = (options) => {
 (function () {
   const csv_path = process.argv[2];
   const template_path = process.argv[3];
+  const failed = [];
 
   if (!csv_path || !template_path) {
     console.error("usage: node index.js ./list.csv ./template.html\n");
@@ -42,8 +43,12 @@ const sendMail = (options) => {
       try {
         await sendMail(options);
       } catch (err) {
+        failed.push(options.to)
         console.log(err);
       }
+    }
+    if(failed.length) {
+      console.log('failed: ' + failed);
     }
   })
 }());
