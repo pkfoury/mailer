@@ -39,7 +39,11 @@ const sendMail = (options) => {
         html: content
       };
 
-      await sendMail(options);
+      try {
+        await sendMail(options);
+      } catch (err) {
+        console.log(err);
+      }
     }
   })
 }());

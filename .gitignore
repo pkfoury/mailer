@@ -1,4 +1,5 @@
 config.json
-template.html
+templates/
+lists/
 node_modules/
 test.csv
